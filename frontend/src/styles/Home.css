@@ -1,0 +1,92 @@
+.home-container {
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
+  background: #f9f9f9;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  color: #2e8b57;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 30px;
+  color: #444;
+  text-align: center;
+}
+
+.status-message {
+  font-size: 1rem;
+  padding: 10px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.status-message.loading {
+  color: #444;
+}
+
+.status-message.error {
+  color: red;
+  font-weight: bold;
+}
+
+.status-message.success {
+  color: green;
+}
+
+.places-grid,
+.hotels-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+/* Responsive: single column on small screens */
+@media (max-width: 768px) {
+  .places-grid,
+  .hotels-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .recommend-btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .searchbar-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .searchbar-input {
+    width: 100%;
+  }
+
+  .card {
+    width: 90vw;
+  }
+}
+
+.recommend-btn {
+  margin: 20px auto;
+  padding: 12px 24px;
+  display: block;
+  background-color: #2e8b57;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.recommend-btn:hover {
+  background-color: #256a45;
+}
