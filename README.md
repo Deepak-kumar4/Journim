@@ -36,6 +36,9 @@ Start the Frontend React App
 npm start
 ````
 
+search->Goa-> you will get list of visiting places select 5 and click on recommend hotels
+search->Munnnar->you will get list of visiting places select 5 and click on recommend hotels
+
 
 
 
