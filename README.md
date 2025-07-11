@@ -4,29 +4,43 @@ Follow these steps to run the project on your local machine:
 
 ### 📦 1. Install Dependencies
 
-#### Backend
+Frontend
+````bash
+cd frontend
+npm install
+````
 
+Backend
 ```bash
 cd backend
 npm install
 ```
-Frontend
-````basg
-cd ../frontend
-npm install
-````
+Make .env file in backend
+```
+MONGO_URI="mongodb+srv://deepak:<password>x@journim.lndvw61.mongodb.net/?retryWrites=true&w=majority&appName=journim"
+PORT=5000
+```
 
-### 2. Start the App
+Seed the sample Data in MongoDB
+```
+node seedData.js
+```
+
+Start the App
 Start the Backend Server
 ````bash
-cd backend
-npm run dev
+node server.js
 ````
 Start the Frontend React App
 ```bash
-cd ../frontend
 npm start
 ````
+
+
+
+
+
+
 
 
 
