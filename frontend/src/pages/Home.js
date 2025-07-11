@@ -151,9 +151,9 @@ export default function Home() {
               value={sortOption}
               onChange={(e) => setSortOption(e.target.value)}
             >
-              <option value="distance">📍 Distance</option>
-              <option value="price">💰 Price</option>
-              <option value="rating">⭐ Rating</option>
+              <option value="distance">Distance</option>
+              <option value="price">Price</option>
+              <option value="rating">Rating</option>
             </select>
           </div>
 
