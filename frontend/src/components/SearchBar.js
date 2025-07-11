@@ -6,9 +6,10 @@ export default function SearchBar({ onSearch }) {
 
   const handleSearch = () => {
   if (query.trim()) {
-    onSearch(query.trim());
+    onSearch(query.trim().toLowerCase());
   }
 };
+
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") handleSearch();
@@ -27,7 +28,4 @@ export default function SearchBar({ onSearch }) {
     </div>
   );
 }
-
-
-
 

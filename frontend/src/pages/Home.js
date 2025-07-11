@@ -9,18 +9,20 @@ import Navbar from "../components/Navbar";
 import "../styles/Home.css";
 
 export default function Home() {
-  const [places, setPlaces] = useState([]);
-  const [selected, setSelected] = useState([]);
-  const [hotels, setHotels] = useState([]);
+  const [places, setPlaces] = useState(() => JSON.parse(localStorage.getItem("places")) || []);
+  const [selected, setSelected] = useState(() => JSON.parse(localStorage.getItem("selected")) || []);
+  const [hotels, setHotels] = useState(() => JSON.parse(localStorage.getItem("hotels")) || []);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
+  const [sortOption, setSortOption] = useState(() => localStorage.getItem("sortOption") || "distance");
 
   useEffect(() => {
-    localStorage.removeItem("places");
-    localStorage.removeItem("selected");
-    localStorage.removeItem("hotels");
-    localStorage.removeItem("lastQuery");
+    const lastQuery = localStorage.getItem("lastQuery");
+    if (lastQuery && places && places.length === 0) {
+      searchPlaces(lastQuery, false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -35,12 +37,15 @@ export default function Home() {
     localStorage.setItem("hotels", JSON.stringify(hotels));
   }, [hotels]);
 
-  
+  useEffect(() => {
+    localStorage.setItem("sortOption", sortOption);
+  }, [sortOption]);
+
   const searchPlaces = async (query, reset = true) => {
     setLoading(true);
     setError("");
     setMessage("");
-    localStorage.setItem("lastQuery", query); // save last query
+    localStorage.setItem("lastQuery", query);
 
     try {
       const res = await axios.get(`http://localhost:5000/api/places/${query}`);
@@ -62,6 +67,7 @@ export default function Home() {
       setLoading(false);
     }
   };
+
   const toggleSelect = (place) => {
     if (selected.some((p) => p._id === place._id)) {
       setSelected(selected.filter((p) => p._id !== place._id));
@@ -69,7 +75,6 @@ export default function Home() {
       setSelected([...selected, place]);
     }
   };
-
 
   const getHotels = async () => {
     setLoading(true);
@@ -94,9 +99,21 @@ export default function Home() {
     }
   };
 
+  const sortHotels = (hotels) => {
+    const sorted = [...hotels];
+    if (sortOption === "price") {
+      sorted.sort((a, b) => a.price - b.price);
+    } else if (sortOption === "rating") {
+      sorted.sort((a, b) => b.rating - a.rating);
+    } else {
+      sorted.sort((a, b) => a.avgDistance - b.avgDistance);
+    }
+    return sorted;
+  };
+
   return (
     <div className="home-container">
-        <Navbar/>
+      <Navbar />
       <h1>Munnar Trip Planner</h1>
 
       <SearchBar onSearch={(query) => searchPlaces(query, true)} />
@@ -124,20 +141,34 @@ export default function Home() {
       )}
 
       {hotels.length > 0 && (
-        <>
+        <div className="hotels-section">
           <h2>Hotels</h2>
+
+          <div className="filter-container">
+            <label htmlFor="sort">Sort by: </label>
+            <select
+              id="sort"
+              value={sortOption}
+              onChange={(e) => setSortOption(e.target.value)}
+            >
+              <option value="distance">📍 Distance</option>
+              <option value="price">💰 Price</option>
+              <option value="rating">⭐ Rating</option>
+            </select>
+          </div>
+
           <div className="hotels-grid">
-            {hotels.map((h) => (
+            {sortHotels(hotels).map((h) => (
               <HotelCard key={h._id} hotel={h} />
             ))}
           </div>
+
           <MapView hotels={hotels} places={selected} height="250px" />
-        </>
+        </div>
       )}
     </div>
   );
 }
-
 
 
 

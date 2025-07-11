@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .searchbar-container {
   display: flex;
   justify-content: center;
@@ -41,3 +42,48 @@
 }
 
 
+=======
+.searchbar-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.searchbar-input {
+  width: 300px;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.searchbar-button {
+  background-color: #2e8b57;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.searchbar-button:hover {
+  background-color: #256a45;
+}
+
+@media (max-width: 768px) {
+  .searchbar-input {
+    width: 100%;
+  }
+
+  .searchbar-button {
+    width: 100%;
+  }
+}
+
+
+>>>>>>> ba77fe1 (Initial commit / Updated project)

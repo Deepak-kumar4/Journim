@@ -11,7 +11,9 @@ export default function HotelCard({ hotel }) {
         <h3>{hotel.name}</h3>
         <p>{hotel.description}</p>
         <p>⭐ {hotel.rating} / 5</p>
-        <p><strong>Price:</strong> ₹{hotel.price} / night</p>
+        <p>
+          <strong>Price:</strong> ₹{hotel.price} / night
+        </p>
 
         {/*  Add reason */}
         {hotel.reason && (
@@ -23,14 +25,12 @@ export default function HotelCard({ hotel }) {
         {/*  Add avgDistance */}
         {hotel.avgDistance !== undefined && (
           <p className="hotel-distance">
-            <strong>Avg. distance:</strong> {hotel.avgDistance.toFixed(2)} km
+            <strong>Avg. distance:</strong> {hotel.avgDistance.toFixed(0)}{" "}
+            meters
           </p>
         )}
       </div>
     </div>
   );
 }
-
-
-
 

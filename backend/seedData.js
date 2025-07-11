@@ -11,7 +11,7 @@ mongoose
 const places = [
   {
     name: "Echo Point",
-    location: "Munnar",
+    location: "munnar",
     latitude: 10.1032,
     longitude: 77.1564,
     image_url:
@@ -20,7 +20,7 @@ const places = [
   },
   {
     name: "Baga Beach",
-    location: "Goa",
+    location: "goa",
     latitude: 15.5529,
     longitude: 73.7517,
     image_url:
@@ -29,7 +29,7 @@ const places = [
   },
   {
     name: "Fort Aguada",
-    location: "Goa",
+    location: "goa",
     latitude: 15.4926,
     longitude: 73.7733,
     image_url:
@@ -38,7 +38,7 @@ const places = [
   },
   {
     name: "Dudhsagar Falls",
-    location: "Goa",
+    location: "goa",
     latitude: 15.3146,
     longitude: 74.3142,
     image_url:
@@ -47,7 +47,7 @@ const places = [
   },
   {
     name: "Basilica of Bom Jesus",
-    location: "Goa",
+    location: "goa",
     latitude: 15.5009,
     longitude: 73.9112,
     image_url:
@@ -56,7 +56,7 @@ const places = [
   },
   {
     name: "Anjuna Flea Market",
-    location: "Goa",
+    location: "goa",
     latitude: 15.5744,
     longitude: 73.7401,
     image_url:
@@ -65,7 +65,7 @@ const places = [
   },
   {
     name: "Calangute Beach",
-    location: "Goa",
+    location: "goa",
     latitude: 15.5472,
     longitude: 73.754,
     image_url:
@@ -74,7 +74,7 @@ const places = [
   },
   {
     name: "Chapora Fort",
-    location: "Goa",
+    location: "goa",
     latitude: 15.6045,
     longitude: 73.7371,
     image_url:
@@ -83,7 +83,7 @@ const places = [
   },
   {
     name: "Attukad Waterfalls",
-    location: "Munnar",
+    location: "munnar",
     latitude: 10.0591,
     longitude: 77.0627,
     image_url:
@@ -92,7 +92,7 @@ const places = [
   },
   {
     name: "Kundala Lake",
-    location: "Munnar",
+    location: "munnar",
     latitude: 10.1728,
     longitude: 77.1906,
     image_url:
@@ -101,7 +101,7 @@ const places = [
   },
   {
     name: "Photo Point",
-    location: "Munnar",
+    location: "munnar",
     latitude: 10.0848,
     longitude: 77.1143,
     image_url:
@@ -110,7 +110,7 @@ const places = [
   },
   {
     name: "Lockhart Gap Viewpoint",
-    location: "Munnar",
+    location: "munnar",
     latitude: 9.9755,
     longitude: 77.0363,
     image_url:
@@ -119,7 +119,7 @@ const places = [
   },
   {
     name: "Blossom International Park",
-    location: "Munnar",
+    location: "munnar",
     latitude: 10.0884,
     longitude: 77.0571,
     image_url:
@@ -128,7 +128,7 @@ const places = [
   },
   {
     name: "Top Station",
-    location: "Munnar",
+    location: "munnar",
     latitude: 10.126,
     longitude: 77.2483,
     image_url:
@@ -137,7 +137,7 @@ const places = [
   },
   {
     name: "Tea Museum",
-    location: "Munnar",
+    location: "munnar",
     latitude: 10.0889,
     longitude: 77.062,
     image_url:
@@ -146,7 +146,7 @@ const places = [
   },
   {
     name: "Mattupetty Dam",
-    location: "Munnar",
+    location: "munnar",
     latitude: 10.0965,
     longitude: 77.123,
     image_url:
@@ -155,7 +155,7 @@ const places = [
   },
   {
     name: "Eravikulam Park",
-    location: "Munnar",
+    location: "munnar",
     latitude: 10.1882,
     longitude: 77.0605,
     image_url:
@@ -194,63 +194,70 @@ const hotels = [
   },
   {
     name: "Taj Fort Aguada Resort",
-    location: "Goa",
+    location: "goa",
     latitude: 15.495,
     longitude: 73.774,
+    rating: 4.7,
     price: 12000,
     image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/2f/24/92/aguada-cottage-garden.jpg?w=900&h=500&s=1",
     description: "Luxury beachfront resort with historic fort views",
   },
   {
     name: "W Goa",
-    location: "Goa",
+    location: "goa",
     latitude: 15.5483,
     longitude: 73.7492,
+    rating: 4.6,
     price: 14000,
     image_url: "https://cache.marriott.com/content/dam/marriott-renditions/GOIWH/goiwh-exterior-2324-hor-feat.jpg?output-quality=70&interpolation=progressive-bilinear&downsize=1920px:*",
     description: "Vibrant beachfront hotel with spa & nightlife",
   },
   {
     name: "Alila Diwa Goa",
-    location: "Goa",
+    location: "goa",
     latitude: 15.4104,
     longitude: 73.9111,
+    rating: 4.5,
     price: 11000,
     image_url: "https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2021/08/11/0733/GOIAL-P0126-Vivo-Exterior.jpg/GOIAL-P0126-Vivo-Exterior.16x9.jpg?imwidth=1280",
     description: "Rice‑paddy resort with pool & spa near Majorda",
   },
   {
     name: "Vivanta Goa, Panaji",
-    location: "Goa",
+    location: "goa",
     latitude: 15.4923,
     longitude: 73.8233,
+    rating: 4.4,
     price: 8000,
     image_url: "https://gos3.ibcdn.com/ce8d200e236d11e88b5b025f77df004f.jpg",
     description: "Stylish city‑center hotel with pool & dining",
   },
   {
     name: "The Lalit Golf & Spa Resort",
-    location: "Goa",
+    location: "goa",
     latitude: 15.5518,
     longitude: 73.7703,
+    rating: 4.3,
     price: 9500,
     image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToG3ciaIg8JPBGzyCiGzMR5jKRjr8xnzlcmQ&s",
     description: "Resort on a hill overlooking Bambolim Valley",
   },
   {
     name: "Caravela Beach Resort",
-    location: "Goa",
+    location: "goa",
     latitude: 15.5833,
     longitude: 73.7417,
+    rating: 4.2,
     price: 10000,
     image_url: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/62495169.jpg?k=6db010be5372ca2475f430b2550494fb285943bb6c405f087b238bad020b96c9&o=&hp=1",
     description: "All‑inclusive resort at Varca Beach",
   },
   {
     name: "Cidade de Goa",
-    location: "Goa",
+    location: "goa",
     latitude: 15.4098,
     longitude: 73.9222,
+    rating: 4.3,
     price: 9000,
     image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTluLSmVdLWPR10ScLZ_BXoLZOvuYdp-slKPw&s",
     description: "Five‑star resort with lagoon and river views",
@@ -274,6 +281,7 @@ const hotels = [
     description: "Eco-friendly forest resort",
   },
 ];
+
 
 
 async function insertData() {

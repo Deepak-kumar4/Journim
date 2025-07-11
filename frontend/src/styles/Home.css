@@ -1,9 +1,22 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #e0f7fa, #f9f9f9); /* Light teal to white */
+}
+
+
 .home-container {
   padding: 20px;
   font-family: "Segoe UI", sans-serif;
-  background: #f9f9f9;
+  background: rgba(255, 255, 255, 0.9); 
   min-height: 100vh;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: auto;
 }
+
 
 h1 {
   text-align: center;
@@ -16,6 +29,13 @@ h2 {
   margin-top: 30px;
   color: #444;
   text-align: center;
+}
+.filter-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 10px 0;
+  gap: 8px;
 }
 
 .status-message {
@@ -90,3 +110,4 @@ h2 {
 .recommend-btn:hover {
   background-color: #256a45;
 }
+

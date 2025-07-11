@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .map-wrapper {
   margin: 1rem 0;
   border-radius: 12px;
@@ -5,3 +6,12 @@
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
+=======
+.map-wrapper {
+  margin: 1rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+>>>>>>> ba77fe1 (Initial commit / Updated project)

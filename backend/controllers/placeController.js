@@ -11,3 +11,4 @@ exports.getPlaces = async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch places' });
   }
 };
+
